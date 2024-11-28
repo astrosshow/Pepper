@@ -3,12 +3,11 @@ from speech_to_text import listen
 from text_to_speech import speak
 
 def chat():
-    print("Hello! I am Pepper, your personal assistant. How can I help you today?")
+    speak("Hello! I am Pepper, your personal assistant. How can I help you today?")
     while True: 
-        print("Listening for user input...")
         user_input = listen()
         if not user_input:
-            print("No input detected. Please try again.")
+            speak("I'm sorry, I didn't catch that. Could you please repeat?")
             continue
         if user_input.lower() in ["exit", "quit", "goodbye"]:
             print("Goodbye!")

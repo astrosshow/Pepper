@@ -9,7 +9,7 @@ def listen():
             text = recognizer.recognize_google(audio)
             return text
         except sr.UnknownValueError:
-            print("Sorry, I did not understand that.")
+            print("Erorr: Could not understand audio")
             return ""
         except sr.RequestError:
             print("Could not request results; check your network connection.")
